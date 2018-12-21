@@ -53,7 +53,7 @@ public class PopulationManager : MonoBehaviour {
     void BreedNewPopulation () {
         List<Brain> sorted = population.OrderBy(o => o.timeWalking).ToList();
         population.Clear();
-        for (int i = sorted.Count/2; i < sorted.Count-1; i++) { // breed best half of population
+        for (int i = (int) (sorted.Count/2.0f) -1; i < sorted.Count-1; i++) { // breed best half of population
             population.Add(Breed(sorted[i], sorted[i + 1]));
             population.Add(Breed(sorted[i+1], sorted[i]));
         }

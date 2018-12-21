@@ -12,8 +12,17 @@ public class Brain : MonoBehaviour {
     bool alive = true;
     bool groundVisible = true;
 
+    public GameObject ETHANPREFAB;
+    GameObject ethan;
+
+    void OnDestroy() {
+        Destroy(ethan);    
+    }
+
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("dead") && PopulationManager.elapsed >= 1f) {
+            timeAlive = 0;
+            timeWalking = 0;
             alive = false;
             this.gameObject.GetComponent<Renderer>().material.color = Color.red;
         }
@@ -30,7 +39,7 @@ public class Brain : MonoBehaviour {
 
 	void Update () {
         if (!alive) return;
-        Debug.DrawRay(eyes.transform.position, eyes.transform.forward * 10, Color.red, 10);
+        //Debug.DrawRay(eyes.transform.position, eyes.transform.forward * 10, Color.red, 10);
         
         RaycastHit hit;
         if (Physics.Raycast(eyes.transform.position, eyes.transform.forward*10, out hit))

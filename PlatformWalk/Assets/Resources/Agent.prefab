@@ -199,7 +199,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeAlive: 0
+  timeWalking: 0
   eyes: {fileID: 1047013471457890}
+  ETHANPREFAB: {fileID: 113348, guid: 54eb5844754051b40a918a84c33b7c1a, type: 2}
 --- !u!136 &136350466972631792
 CapsuleCollider:
   m_ObjectHideFlags: 1
