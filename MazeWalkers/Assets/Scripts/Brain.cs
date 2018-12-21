@@ -23,22 +23,17 @@ public class Brain : MonoBehaviour {
     public void Init () {
         startPosition = transform.position;
         distanceTraveled = 0;
-        // forward: 0, left: 1, right: 2
         dna = new DNA(dnaLength, 360);
         alive = true;
+        this.gameObject.GetComponent<Renderer>().material.color = Color.green;
     }
 
 	void Update () {
         if (!alive) return;
-
-        Debug.DrawRay(eyes.transform.position, eyes.transform.forward * 0.5f, Color.red, 10);
-        
+        //Debug.DrawRay(eyes.transform.position, eyes.transform.forward * 0.5f, Color.red, 10);
         RaycastHit hit;
-        if (Physics.SphereCast(eyes.transform.position, 0.1f, eyes.transform.forward*10, out hit, 0.5f))
-            wallVisible = hit.collider.gameObject.CompareTag("wall") ? true : false;
-        
-
-        
+        if (Physics.SphereCast(eyes.transform.position, 0.1f, eyes.transform.forward, out hit, 0.5f))
+            wallVisible = hit.collider.gameObject.CompareTag("wall") ? true : false; 
 
 	}
 
@@ -48,7 +43,7 @@ public class Brain : MonoBehaviour {
         float v = dna.GetGene(0);
         if (wallVisible)
             h = dna.GetGene(1);
-        transform.Translate(0, 0, v * 0.001f);
+        transform.Translate(0, 0, v * 0.0001f);
         transform.Rotate(0, h, 0);
         distanceTraveled = Vector2.Distance(startPosition, transform.position);
     }

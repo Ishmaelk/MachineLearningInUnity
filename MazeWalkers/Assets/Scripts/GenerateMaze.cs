@@ -26,7 +26,7 @@ public class GenerateMaze : MonoBehaviour {
 				{
 					Instantiate(blockPrefab, new Vector3(w + this.transform.position.x, this.transform.position.y,d + this.transform.position.z), Quaternion.identity);
 				}
-				else if(Random.Range(0,5) < 1)
+				else if(Random.Range(0,7) < 1)
 				{
 					Instantiate(blockPrefab, new Vector3(w + this.transform.position.x, this.transform.position.y,d + this.transform.position.z), Quaternion.identity);
 				}
