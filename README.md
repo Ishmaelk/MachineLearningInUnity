@@ -1,4 +1,6 @@
 # MachineLearningInUnity
+Disclaimer: This repository is a follow along of a udemy course taught by Penny de Byl. The course can be found here https://www.udemy.com/machine-learning-with-unity/
+
 Bitesize machine learning projects utilizing genetic algorithms and neural networks in Unity.
 
 Unity must be installed to run projects. Once installed each of the following projects can be opened in the editor. Simply press the play button at the top of the screen to start.
