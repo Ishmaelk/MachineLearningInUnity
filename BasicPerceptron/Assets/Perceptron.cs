@@ -18,6 +18,10 @@ public class Perceptron : MonoBehaviour {
 
     void Start() {
         Train(numEpochs: 8);
+        Debug.Log("Test 0 0: " + CalculateOutput(0, 0));
+        Debug.Log("Test 0 1: " + CalculateOutput(0, 1));
+        Debug.Log("Test 1 0: " + CalculateOutput(1, 0));
+        Debug.Log("Test 1 1: " + CalculateOutput(1, 1));
     }
 
     void Train(int numEpochs) {
@@ -41,6 +45,12 @@ public class Perceptron : MonoBehaviour {
 
     double CalculateOutput (int i) { // returns a 0 or 1 decision based on weights and bias
         double dp = DotProductBias(ts[i].input, weights);
+        return dp > 0 ? 1 : 0;
+    }
+
+    double CalculateOutput (double i1, double i2) {
+        double[] input = { i1, i2 };
+        double dp = DotProductBias(weights, input);
         return dp > 0 ? 1 : 0;
     }
 
