@@ -131,4 +131,15 @@ public class ANN {
         return value >= 0 ? value : 0.01 * value;
     }
 
+    double Sinusoid (double value) {
+        return Mathf.Sin((float)value);
+    }
+
+    double ArcTan (double value) {
+        return Mathf.Atan((float)value);
+    }
+
+    double SoftSign (double value) {
+        return value / (1 + Mathf.Abs((float)value));
+    }
 }
