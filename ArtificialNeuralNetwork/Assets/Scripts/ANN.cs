@@ -57,7 +57,8 @@ public class ANN {
                 }
 
                 N -= layers[i].neurons[j].bias;
-                layers[i].neurons[j].output = ActivationFunction(N);
+                // Call different function if we are at the Output Layer
+                layers[i].neurons[j].output = i == numHidden ? OutputActivationFunction(N) : ActivationFunction(N);
                 outputs.Add(layers[i].neurons[j].output);
             }
         }
@@ -104,6 +105,10 @@ public class ANN {
         return Sigmoid(value);
     }
 
+    double OutputActivationFunction (double value) {
+        return Sigmoid(value);
+    }
+
     double Step(double value) { //(aka binary step)
         if (value < 0) return 0;
         else return 1;
@@ -113,4 +118,17 @@ public class ANN {
         double k = (double)System.Math.Exp(value);
         return k / (1.0f + k);
     }
+
+    double TanH(double value) {
+        return (2 * (Sigmoid(2 * value)) - 1);
+    }
+
+    double ReLu(double value) {
+        return value > 0 ? value : 0;
+    }
+
+    double LeakyReLu(double value) {
+        return value >= 0 ? value : 0.01 * value;
+    }
+
 }

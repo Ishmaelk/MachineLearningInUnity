@@ -11,7 +11,7 @@ public class Brain : MonoBehaviour {
         sumSquareError = 0;
         ann = new ANN(nI: 2, nO: 1, nH: 1, nPH: 2, a: 0.8);
         List<double> result;
-        for (int i = 0; i < 1000; i++) { // 1000 epochs
+        for (int i = 0; i < 100000; i++) { // 100000 epochs
             sumSquareError = 0;
             result = Train(1, 1, 0);
             sumSquareError += Mathf.Pow((float)result[0] - 0, 2);
@@ -24,7 +24,7 @@ public class Brain : MonoBehaviour {
         }
         Debug.Log("---------------------");
         Debug.Log("Training Complete!");
-        Debug.Log("Sum of squared error: " + sumSquareError);
+        Debug.Log("Sum of squared errors: " + sumSquareError);
         Debug.Log("-(Unrounded results)-");
         result = Train(1, 1, 0);
         Debug.Log("XOR(1, 1) = " + result[0]);
