@@ -25,15 +25,15 @@ public class Brain : MonoBehaviour {
         Debug.Log("---------------------");
         Debug.Log("Training Complete!");
         Debug.Log("Sum of squared error: " + sumSquareError);
-        Debug.Log("---------------------");
+        Debug.Log("-(Unrounded results)-");
         result = Train(1, 1, 0);
-        Debug.Log("XOR(1, 1) = " + Mathf.RoundToInt((float)result[0]));
+        Debug.Log("XOR(1, 1) = " + result[0]);
         result = Train(0, 1, 1);
-        Debug.Log("XOR(0, 1) = " + Mathf.RoundToInt((float)result[0]));
+        Debug.Log("XOR(0, 1) = " + result[0]);
         result = Train(1, 0, 1);
-        Debug.Log("XOR(1, 0) = " + Mathf.RoundToInt((float)result[0]));
+        Debug.Log("XOR(1, 0) = " + result[0]);
         result = Train(0, 0, 0);
-        Debug.Log("XOR(0, 0) = " + Mathf.RoundToInt((float)result[0]));
+        Debug.Log("XOR(0, 0) = " + result[0]);
     }
 	
     List<double> Train (double i1, double i2, double o) {
