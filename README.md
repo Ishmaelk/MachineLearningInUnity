@@ -17,3 +17,7 @@ Unity must be installed to run projects. Once installed each of the following pr
 
   A set of objects represent different types of weapons or food. This perceptron classifies those objects into their respective bins by evaluating their traits, sharpness and edibleness. Results are plotted on a graph.
   
+4) Artificial Neural Network 
+  
+  An Artificial Neural Network is trained to calculate XOR using Neuron, Layer, ANN (Artificial Neural Network), and Brain C# classes. Training data is fed through the input layer, processed through one hidden layer, and outputted via the output layer. The Sigmoid or logistic softstep activation function was used to discern output by each neuron and backpropagation was used to update the weights of all neurons in the network.
+  
