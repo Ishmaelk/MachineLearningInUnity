@@ -7,17 +7,17 @@ Unity must be installed to run projects. Once installed each of the following pr
 
 1) PlatformWalk
 
-  ML agents successively bred generation by generation to stay on a platform while moving.
+    ML agents successively bred generation by generation to stay on a platform while moving.
 
 2) Basic Perceptron
 
-  A Perceptron is created and trained within 8 epochs to calculate OR operations given two inputs. Output is shown on Unity console.
+    A Perceptron is created and trained within 8 epochs to calculate OR operations given two inputs. Output is shown on Unity console.
   
 3) Perceptron Classification
 
-  A set of objects represent different types of weapons or food. This perceptron classifies those objects into their respective bins by evaluating their traits, sharpness and edibleness. Results are plotted on a graph.
+    A set of objects represent different types of weapons or food. This perceptron classifies those objects into their respective bins by evaluating their traits, sharpness and edibleness. Results are plotted on a graph.
   
 4) Artificial Neural Network 
   
-  An Artificial Neural Network is trained to calculate XOR using Neuron, Layer, ANN (Artificial Neural Network), and Brain C# classes. Training data is fed through the input layer, processed through one hidden layer, and outputted via the output layer. The Sigmoid or logistic softstep activation function was used to discern output by each neuron and backpropagation was used to update the weights of all neurons in the network.
+    An Artificial Neural Network is trained to calculate XOR using Neuron, Layer, ANN (Artificial Neural Network), and Brain C# classes.  Training data is fed through the input layer, processed through one hidden layer, and outputted via the output layer. The Sigmoid or logistic softstep activation function was used to discern output by each neuron and backpropagation was used to update the weights of all neurons in the network.
   
