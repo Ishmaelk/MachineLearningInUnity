@@ -21,3 +21,5 @@ Unity must be installed to run projects. Once installed each of the following pr
   
     An Artificial Neural Network is trained to calculate XOR using Neuron, Layer, ANN (Artificial Neural Network), and Brain C# classes.  Training data is fed through the input layer, processed through one hidden layer, and outputted via the output layer. The Sigmoid or logistic softstep activation function was used to discern output by each neuron and backpropagation was used to update the weights of all neurons in the network.
   
+5) NeuralPong
+    Two artificial neural networks play pong against one another. They train fairly quickly with an alpha of 0.11 but this can be altered in the brain script by changing the last value in the ANN constructor.
